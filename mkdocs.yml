@@ -1,5 +1,6 @@
 site_name: 算法笔记
 theme:
+  logo: material/library
   name: material
   language: zh
   features:
@@ -91,6 +92,8 @@ nav:
   - LeetCode:
     - 题库: 
       - 1. 两数之和: leetcode/两数之和.md
+      - 2. 两数相加: leetcode/两数相加.md
+
     - License: leetcode/2.md
     - Tutorials:
       - tutorials/index.md
