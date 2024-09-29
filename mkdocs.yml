@@ -1,26 +1,86 @@
+# Project information
 site_name: 算法笔记
+# site_url: https://cvenwu.github.io/mkdocs-material/
+site_author: yirufeng
+# site_description: >-
+  # Write your documentation in Markdown and create a professional static site in
+  # minutes – searchable, customizable, in 60+ languages, for all devices
+
+# 设置右上角关联到的仓库
+repo_name: cvenwu/AlgoBook
+repo_url: https://github.com/cvenwu/AlgoBook
+
+# 版权信息
+copyright: Copyright &copy; 2016 - 2024 yirufeng
+
+# 导航栏设置
+nav:
+  - Home: index.md
+  - LeetCode:
+    - 题目列表:
+      - 1. 两数之和: leetcode/1_两数之和.md
+      - 2235. 两整数相加: leetcode/2235_两整数相加.md
+      - 2. 两数相加: leetcode/两数相加.md
+      - License: leetcode/2.md
+    - Tutorials:
+      - tutorials/index.md
+      - "Blogs":
+        - template/template.md
+      - "Social cards":
+        - tutorials/social/basic.md
+        - tutorials/social/custom.md
+    - Changelog:
+      - tx: changelog/index.md
+  - 程序员面试金典:
+    - setup/index.md
+    - Changing the colors: setup/changing-the-colors.md
+    - Extensions:
+      - setup/extensions/index.md
+      - Python Markdown: setup/extensions/python-markdown.md
+  - 刷题总结: 
+    - plugins/index.md
+    - Requirements:
+      - Caching: plugins/requirements/caching.md
+  - Community:
+    - Contributing:
+      - contributing/index.md
+      - Reporting a bug: contributing/reporting-a-bug.md
+      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
+      - Requesting a change: contributing/requesting-a-change.md
+      - Adding translations: contributing/adding-translations.md
+      - Making a pull request: contributing/making-a-pull-request.md
+      - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
+    - Guides:
+      - Creating a reproduction: guides/creating-a-reproduction.md
+    - Community experts program:
+      - insiders/community-experts-program/index.md
+  - Blog:
+    - blog/index.md
+
+# 主题相关配置
 theme:
-  logo: material/library
   name: material
   language: zh
+  icon:
+    logo: material/library
   features:
     - announce.dismiss
-    - content.action.edit
-    - content.action.view
+    # - content.action.edit
+    # - content.action.view
     - content.code.annotate
     - content.code.copy
     - content.code.select
     - content.footnote.tooltips
     - content.tabs.link
     - content.tooltips
-    # - header.autohide
-    # - navigation.expand
+    - header.autohide
+    - navigation.expand
     - navigation.footer
     - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
-    # - navigation.prune
+    - navigation.prune
     - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
@@ -65,14 +125,20 @@ markdown_extensions:
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.keys
   - pymdownx.magiclink:
       normalize_issue_symbols: true
@@ -87,54 +153,19 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-nav:
-  - Home: index.md
-  - LeetCode:
-    - 题库: 
-      - 1. 两数之和: leetcode/两数之和.md
-      - 2. 两数相加: leetcode/两数相加.md
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/cvenwu
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:yirufeng@foxmail.com
 
-    - License: leetcode/2.md
-    - Tutorials:
-      - tutorials/index.md
-      - "Blogs":
-        - tutorials/blogs/basic.md
-      - "Social cards":
-        - tutorials/social/basic.md
-        - tutorials/social/custom.md
-    - Changelog:
-      - changelog/index.md
-      - How to upgrade: upgrade.md
-  - 程序员面试金典:
-    - setup/index.md
-    - Changing the colors: setup/changing-the-colors.md
-    - Changing the fonts: setup/changing-the-fonts.md
-    - Extensions:
-      - setup/extensions/index.md
-      - Python Markdown: setup/extensions/python-markdown.md
-      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
-  - 刷题总结: 
-    - plugins/index.md
-    - Blog: plugins/blog.md
-    - Group: plugins/group.md
-    - Requirements:
-      - Image processing: plugins/requirements/image-processing.md
-      - Caching: plugins/requirements/caching.md
-  - Community:
-    - Contributing:
-      - contributing/index.md
-      - Reporting a bug: contributing/reporting-a-bug.md
-      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
-      - Requesting a change: contributing/requesting-a-change.md
-      - Adding translations: contributing/adding-translations.md
-      - Making a pull request: contributing/making-a-pull-request.md
-      - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
-    - Guides:
-      - Creating a reproduction: guides/creating-a-reproduction.md
-    - Community experts program:
-      - insiders/community-experts-program/index.md
-  - Blog:
-    - blog/index.md
-repo_name: cvenwu/AlgoBook
-repo_url: https://github.com/cvenwu/AlgoBook
-copyright: Copyright &copy; 2016 - 2024 yirufeng
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/katex.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
