@@ -183,3 +183,26 @@ tags on separate lines and adding new lines between the tags and the content.
 - :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
 
 </div>
+
+
+
+```cpp title="two_sum.cpp" linenums="2" hl_lines="7"
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int i, j;
+        for (i = 0; i < nums.size(); i++)
+        {
+            //这里其实可以优化一下，j是从i+1开始，因为前面的我们在i为之前的值的时候就已经判断过了
+            for (j = i+1; j < nums.size(); j++)
+            {
+                if ((nums[i] + nums[j]) == target) 
+                {
+                    return {i, j};
+                }
+            }
+        }
+        return {};
+    }
+};
+```

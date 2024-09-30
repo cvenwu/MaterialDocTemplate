@@ -23,12 +23,8 @@ nav:
       - 2. 两数相加: leetcode/两数相加.md
       - License: leetcode/2.md
     - Tutorials:
+      - template: template/template.md
       - tutorials/index.md
-      - "Blogs":
-        - template/template.md
-      - "Social cards":
-        - tutorials/social/basic.md
-        - tutorials/social/custom.md
     - Changelog:
       - tx: changelog/index.md
   - 程序员面试金典:
@@ -44,11 +40,6 @@ nav:
   - Community:
     - Contributing:
       - contributing/index.md
-      - Reporting a bug: contributing/reporting-a-bug.md
-      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
-      - Requesting a change: contributing/requesting-a-change.md
-      - Adding translations: contributing/adding-translations.md
-      - Making a pull request: contributing/making-a-pull-request.md
       - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
     - Guides:
       - Creating a reproduction: guides/creating-a-reproduction.md
@@ -77,9 +68,9 @@ theme:
     - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.prune
     - navigation.sections
     - navigation.tabs
